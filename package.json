@@ -1,0 +1,35 @@
+{
+  "name": "my-gatsby-blog",
+  "version": "0.1.0",
+  "description": "A simplified bare-bones Gatsby blog",
+  "author": "Lucio Afonso",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "n/a",
+  "private": true,
+  "homepage": "https://my-gatsby-blog-2020.netlify.app",
+  "repository": "github:UnderGrounder96/my-gatsby-blog",
+  "scripts": {
+    "build": "gatsby build",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "gatsby": "^2.24.14",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.1.0",
+    "prettier": "2.0.5"
+  },
+  "engines": {
+    "node": "~12.16.3",
+    "npm": "~6.14.4"
+  },
+  "keywords": [
+    "blog"
+  ]
+}
