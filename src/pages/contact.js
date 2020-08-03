@@ -1,12 +1,10 @@
 import React from "react"
 
-import Header from "../components/Header"
-import Footer from "../components/Footer"
+import Layout from "../components/Layout"
 
 export default function ContactPage() {
   return (
-    <div>
-      <Header />
+    <Layout>
       <h1>Contact</h1>
       <p>
         I'm always open for contact via{" "}
@@ -20,7 +18,6 @@ export default function ContactPage() {
         on Twitter. Feel free to ask about past work, future opportunities or
         just chatting.
       </p>
-      <Footer />
-    </div>
+    </Layout>
   )
 }

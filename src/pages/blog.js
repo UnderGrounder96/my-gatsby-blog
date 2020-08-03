@@ -1,15 +1,12 @@
 import React from "react"
 
-import Header from "../components/Header"
-import Footer from "../components/Footer"
+import Layout from "../components/Layout"
 
 export default function BlogPage() {
   return (
-    <div>
-      <Header />
+    <Layout>
       <h1>Blog</h1>
       <p>Future posts will show up here!</p>
-      <Footer />
-    </div>
+    </Layout>
   )
 }

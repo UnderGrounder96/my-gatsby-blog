@@ -1,19 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Header from "../components/Header"
-import Footer from "../components/Footer"
+import Layout from "../components/Layout"
 
 export default function IndexPage() {
   return (
-    <div>
-      <Header />
+    <Layout>
       <h1>Home</h1>
       <p>
         This is the home page! Need a developer?{" "}
-        <Link to="/contact">contact</Link> me!
+        <Link to="/contact">Contact</Link> me!
       </p>
-      <Footer />
-    </div>
+    </Layout>
   )
 }
