@@ -1,10 +1,12 @@
 import React from "react"
 
+import Layout from "../components/Layout"
+
 export default function BlogPage() {
   return (
-    <div>
+    <Layout>
       <h1>Blog</h1>
       <p>Future posts will show up here!</p>
-    </div>
+    </Layout>
   )
 }
