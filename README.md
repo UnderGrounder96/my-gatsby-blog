@@ -12,7 +12,7 @@ NodeJS 12.16.3 and npm 6.14.4.
 
 ## Prerequisites
 
-In order to use this program it is highly necessary to have an _internet connection_ and install <br /> NodeJS v12.16+ (includes npm v6.14+).
+In order to use this program it is highly necessary to have an **_internet connection_** and install <br /> NodeJS v12.16+ (includes npm v6.14+).
 
 i) Installing NodeJS v12.16+ <br />
 It is possible that NodeJS has been already installed, to check use the following code in the command line:
@@ -39,7 +39,7 @@ to check use the following code in the command line:
 Please link all npm dependencies:
 
 ```
-  ~/gatsby_blog> npm ln
+  ~/gatsby_blog> npm i
   [*installation warnings*]
 
   [X packages are looking for funding]
