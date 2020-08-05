@@ -3,7 +3,7 @@ import React from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
-import "../scss/pages/index.module.scss"
+import "../scss/style.scss"
 import LayoutStyles from "../scss/components/layout.module.scss"
 
 export default function Layout({ children }) {
