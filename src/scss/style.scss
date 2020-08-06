@@ -1,7 +1,7 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 
 html {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -627,7 +627,8 @@ pre tt:after {
 Style-ish
 */
 
-a {
+a,
+a:hover {
   text-decoration: none;
 }
 
