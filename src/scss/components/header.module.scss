@@ -13,8 +13,8 @@
       color: #666666;
 
       .nav-item .logo {
-        display: flex;
-        margin: auto;
+        position: absolute;
+        left: 0px;
         justify-content: flex-start;
       }
     }
