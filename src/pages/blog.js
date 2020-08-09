@@ -26,7 +26,7 @@ export default function BlogPage() {
   `)
 
   return (
-    <Layout>
+    <Layout page="Blog">
       <h1>Blog</h1>
       <ul>
         {data.object.array.map(obj => (
