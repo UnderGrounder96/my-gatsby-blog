@@ -1,7 +1,7 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 
 html {
-  font-family: Arial, Helvetica, sans-serif;;
+  font-family: Arial, Helvetica, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -45,9 +45,11 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
+a,
 a:active,
 a:hover {
   outline-width: 0;
+  text-decoration: none;
 }
 abbr[title] {
   border-bottom: none;
@@ -212,6 +214,7 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 img {
+  opacity: 0.8;
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -621,17 +624,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-}
-
-/*
-Style-ish
-*/
-
-a,
-a:hover {
-  text-decoration: none;
-}
-
-img:hover {
-  opacity: 0.8;
 }

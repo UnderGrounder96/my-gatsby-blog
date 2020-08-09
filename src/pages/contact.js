@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 
 export default function ContactPage() {
   return (
-    <Layout>
+    <Layout page="Contact">
       <h1>Contact</h1>
       <p>
         I'm always open for contact via{" "}

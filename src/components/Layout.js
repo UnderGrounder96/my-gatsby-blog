@@ -1,19 +1,20 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Helmet from "react-helmet"
 
+import SEO from "./SEO"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
 import "../scss/style.scss"
 import LayoutStyles from "../scss/components/layout.module.scss"
 
-export default function Layout({ children }) {
+export default function Layout({ children, page }) {
   const fullYear = new Date().getFullYear()
-  const data = useStaticQuery(graphql`
+  const { site } = useStaticQuery(graphql`
     query {
       site {
         meta: siteMetadata {
+          title
           author
           description
         }
@@ -22,19 +23,19 @@ export default function Layout({ children }) {
   `)
 
   return (
-    <div>
-      <Helmet>
-        <meta name="description" content={data.site.meta.description} />
-        <meta name="author" content={data.site.meta.description} />
-      </Helmet>
-      <div className={LayoutStyles.container}>
-        <div className={LayoutStyles.content}>
-          <Header />
-          {children}
-        </div>
-
-        <Footer fullYear={fullYear} />
+    <div className={LayoutStyles.container}>
+      <SEO
+        author={site.meta.author}
+        description={site.meta.description}
+        title={site.meta.title}
+        page={page}
+      />
+      <div className={LayoutStyles.content}>
+        <Header />
+        <main role="main">{children}</main>
       </div>
+
+      <Footer author={site.meta.author} fullYear={fullYear} />
     </div>
   )
 }
