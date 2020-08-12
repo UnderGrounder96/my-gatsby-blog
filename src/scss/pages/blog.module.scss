@@ -1,0 +1,9 @@
+.blog-list {
+  list-style-type: none;
+  overflow: auto;
+  height: 400px; /* - Get height from React - */
+
+  .title {
+    color: #000000;
+  }
+}

@@ -1,7 +1,9 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/Layout"
+
+import BlogStyles from "../scss/pages/blog.module.scss"
 
 export default function BlogPage() {
   const { object } = useStaticQuery(graphql`
@@ -19,6 +21,9 @@ export default function BlogPage() {
             }
             html
             excerpt
+            fields {
+              slug
+            }
           }
         }
       }
@@ -27,20 +32,20 @@ export default function BlogPage() {
 
   return (
     <Layout page="Blog">
-      <h1>Blog</h1>
-      <ul>
+      <ul className={BlogStyles.blogList}>
         {object.array.map(({ node }) => (
           <li key={node.content.id}>
-            <h2>{node.content.title}</h2>
-            <p>
-              <a href={node.content.category}>{node.content.category}</a>
-              <br />
-              {node.content.date}
-              <br />
-              {node.content.description}
-              <br />
-              {node.excerpt}
-            </p>
+            <h2>
+              <Link
+                to={`/blog/${node.fields.slug}`}
+                className={BlogStyles.title}
+              >
+                {node.content.title}
+              </Link>
+            </h2>
+            <i>{node.content.date}</i>
+            <div dangerouslySetInnerHTML={{ __html: node.html }}></div>
+            <hr />
           </li>
         ))}
       </ul>
