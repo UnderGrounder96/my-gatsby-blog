@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
 
 export default function BlogPage() {
-  const data = useStaticQuery(graphql`
+  const { object } = useStaticQuery(graphql`
     query {
       object: allMarkdownRemark {
         array: edges {
@@ -29,19 +29,17 @@ export default function BlogPage() {
     <Layout page="Blog">
       <h1>Blog</h1>
       <ul>
-        {data.object.array.map(obj => (
-          <li key={obj.node.content.id}>
-            <h2>{obj.node.content.title}</h2>
+        {object.array.map(({ node }) => (
+          <li key={node.content.id}>
+            <h2>{node.content.title}</h2>
             <p>
-              <a href={obj.node.content.category}>
-                {obj.node.content.category}
-              </a>
+              <a href={node.content.category}>{node.content.category}</a>
               <br />
-              {obj.node.content.date}
+              {node.content.date}
               <br />
-              {obj.node.content.description}
+              {node.content.description}
               <br />
-              {obj.node.html}
+              {node.excerpt}
             </p>
           </li>
         ))}
