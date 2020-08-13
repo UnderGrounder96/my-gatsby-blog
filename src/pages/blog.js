@@ -1,10 +1,12 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/Layout"
 
+import BlogStyles from "../scss/pages/blog.module.scss"
+
 export default function BlogPage() {
-  const data = useStaticQuery(graphql`
+  const { object } = useStaticQuery(graphql`
     query {
       object: allMarkdownRemark {
         array: edges {
@@ -19,6 +21,9 @@ export default function BlogPage() {
             }
             html
             excerpt
+            fields {
+              slug
+            }
           }
         }
       }
@@ -27,22 +32,20 @@ export default function BlogPage() {
 
   return (
     <Layout page="Blog">
-      <h1>Blog</h1>
-      <ul>
-        {data.object.array.map(obj => (
-          <li key={obj.node.content.id}>
-            <h2>{obj.node.content.title}</h2>
-            <p>
-              <a href={obj.node.content.category}>
-                {obj.node.content.category}
-              </a>
-              <br />
-              {obj.node.content.date}
-              <br />
-              {obj.node.content.description}
-              <br />
-              {obj.node.html}
-            </p>
+      <ul className={BlogStyles.blogList}>
+        {object.array.map(({ node }) => (
+          <li key={node.content.id}>
+            <h2>
+              <Link
+                to={`/blog/${node.fields.slug}`}
+                className={BlogStyles.title}
+              >
+                {node.content.title}
+              </Link>
+            </h2>
+            <i>{node.content.date}</i>
+            <div dangerouslySetInnerHTML={{ __html: node.html }}></div>
+            <hr />
           </li>
         ))}
       </ul>
