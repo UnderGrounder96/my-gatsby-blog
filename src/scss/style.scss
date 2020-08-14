@@ -7,6 +7,7 @@ html {
 }
 body {
   margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -87,9 +88,6 @@ sub {
 }
 sup {
   top: -0.5em;
-}
-img {
-  border-style: none;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -214,7 +212,6 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 img {
-  opacity: 0.8;
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -224,6 +221,10 @@ img {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  border-style: none;
+}
+img:hover{
+  opacity: 0.8;
 }
 h1 {
   margin-left: 0;

@@ -6,6 +6,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 
 import "../scss/style.scss"
+
 import LayoutStyles from "../scss/components/layout.module.scss"
 
 export default function Layout({ children, page }) {
@@ -32,7 +33,9 @@ export default function Layout({ children, page }) {
       />
       <div className={LayoutStyles.content}>
         <Header />
-        <main role="main">{children}</main>
+        <main className={LayoutStyles.main} role="main">
+          {children}
+        </main>
       </div>
 
       <Footer author={site.meta.author} fullYear={fullYear} />

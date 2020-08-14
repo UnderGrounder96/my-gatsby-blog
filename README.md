@@ -5,6 +5,8 @@ Currently live at: https://my-gatsby-blog-2020.netlify.app <br />
 
 **Tech to be used**: GatsbyJS, graphql, scss...
 
+![Gatsby Blog image](GatsbyBlog.png)
+
 ## Getting Started
 
 This program was created under Linux Ubuntu 20.04 (x64) Operative System using GatsbyJS 2.24.14, <br />
@@ -59,7 +61,7 @@ Then opening the (default) website on **Mozilla Firefox**(\*):
 
 ## Versioning
 
-Version 0.1 - Current version
+Version 1.0 - Current version
 
 ## Author
 

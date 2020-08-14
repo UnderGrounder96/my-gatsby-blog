@@ -1,5 +1,6 @@
 ---
 id: 3
+image: "../../../static/img/rentAcar.png"
 title: "Rent a car"
 date: "2020-01-02"
 category: "Web development"
