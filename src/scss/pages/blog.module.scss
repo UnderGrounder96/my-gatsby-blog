@@ -1,9 +1,21 @@
-.blog-list {
+
+  .blog-list {
   list-style-type: none;
-  overflow: auto;
-  height: 400px; /* - Get height from React - */
+  text-align: justify;
+  text-justify: inter-word;
 
   .title {
-    color: #000000;
+    margin-top: 2.5%;
+
+    .link {
+      color: #000000;
+    }
+    .link:hover {
+      color: #333333;
+    }
+  }
+
+  .posts {
+    margin-bottom: 2%;
   }
 }

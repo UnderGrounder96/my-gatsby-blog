@@ -1,5 +1,6 @@
 ---
 id: 4
+image: "../../../static/img/TwitterDjango.png"
 title: "Twitter Django"
 date: "2020-02-01"
 category: "Web development"

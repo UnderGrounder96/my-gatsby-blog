@@ -6,7 +6,17 @@
   flex-direction: column;
   min-height: 100vh;
 
+
+
   .content {
     flex-grow: 1;
+
+    .main {
+      overflow: auto;
+      height: 79vh;
+      margin: auto;
+      // margin-top:25%;
+      text-align: center;
+    }
   }
 }

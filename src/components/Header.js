@@ -5,7 +5,7 @@ import HeaderStyles from "../scss/components/header.module.scss"
 
 export default function Header() {
   return (
-    <header className={HeaderStyles.header}>
+    <header>
       <nav>
         <ul className={HeaderStyles.navList}>
           <li>
@@ -19,7 +19,7 @@ export default function Header() {
                 width="50px"
                 height="50px"
                 loading="lazy"
-                src="/img/logo.png"
+                src="/logo.png"
                 alt="logo"
               />
             </Link>
