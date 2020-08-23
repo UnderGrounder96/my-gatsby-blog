@@ -61,7 +61,7 @@ Then opening the (default) website on **Mozilla Firefox**(\*):
 
 ## Versioning
 
-Version 1.0 - Current version
+Version 1.1 - Current version
 
 ## Author
 
