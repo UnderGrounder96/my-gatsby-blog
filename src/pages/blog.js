@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Layout from "../components/Layout"
 
@@ -8,21 +9,15 @@ import BlogStyles from "../scss/pages/blog.module.scss"
 export default function BlogPage() {
   const { object } = useStaticQuery(graphql`
     query {
-      object: allMarkdownRemark {
+      object: allContentfulBlogApi(sort: { fields: date, order: DESC }) {
         array: edges {
-          node {
-            content: frontmatter {
-              id
-              date
-              title
-              category
-              homepage
-              description
-            }
-            html
-            excerpt
-            fields {
-              slug
+          content: node {
+            title
+            # fromNow: true; formatString is used similarly to mementojs
+            date(formatString: "MMMM Do, YYYY")
+            slug
+            post {
+              json
             }
           }
         }
@@ -33,21 +28,15 @@ export default function BlogPage() {
   return (
     <Layout page="Blog">
       <ul className={BlogStyles.blogList}>
-        {object.array.map(({ node }) => (
-          <li key={node.content.id} className={BlogStyles.posts}>
+        {object.array.map(({ content }) => (
+          <li className={BlogStyles.posts}>
             <h2 className={BlogStyles.title}>
-              <Link
-                className={BlogStyles.link}
-                to={`/blog/${node.fields.slug}`}
-              >
-                {node.content.title}
+              <Link className={BlogStyles.link} to={`/blog/${content.slug}`}>
+                {content.title}
               </Link>
             </h2>
-            <i>{node.content.date}</i>
-            <div className={BlogStyles.post}
-              dangerouslySetInnerHTML={{ __html: node.html }}
-            ></div>
-            <hr />
+            <i>{content.date}</i>
+            {documentToReactComponents(content.post.json)}
           </li>
         ))}
       </ul>

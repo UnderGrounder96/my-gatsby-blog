@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bf920c95-5b70-46a4-9b29-c8390b65ad52/deploy-status)](https://app.netlify.com/sites/my-gatsby-blog-2020/deploys)
+
 # gatsby_blog
 
 This is my new blog. <br />
@@ -61,7 +63,7 @@ Then opening the (default) website on **Mozilla Firefox**(\*):
 
 ## Versioning
 
-Version 1.0 - Current version
+Version 1.1 - Current version
 
 ## Author
 
