@@ -13,11 +13,11 @@ export default function BlogPage() {
           node {
             content: frontmatter {
               id
+              date
               title
               category
-              description
-              date
               homepage
+              description
             }
             html
             excerpt
@@ -34,7 +34,7 @@ export default function BlogPage() {
     <Layout page="Blog">
       <ul className={BlogStyles.blogList}>
         {object.array.map(({ node }) => (
-          <li key={node.content.id}>
+          <li key={node.content.id} className={BlogStyles.posts}>
             <h2 className={BlogStyles.title}>
               <Link
                 className={BlogStyles.link}
@@ -44,8 +44,7 @@ export default function BlogPage() {
               </Link>
             </h2>
             <i>{node.content.date}</i>
-            <div
-              className={BlogStyles.posts}
+            <div className={BlogStyles.post}
               dangerouslySetInnerHTML={{ __html: node.html }}
             ></div>
             <hr />

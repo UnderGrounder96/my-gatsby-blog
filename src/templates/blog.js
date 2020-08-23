@@ -17,8 +17,8 @@ export const data = graphql`
   query($slug: String!) {
     object: markdownRemark(fields: { slug: { eq: $slug } }) {
       details: frontmatter {
-        title
         date
+        title
         category
       }
       html
