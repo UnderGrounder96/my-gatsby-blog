@@ -55,9 +55,24 @@ module.exports = {
         icon: `static/logo.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 750,
+              linkImagesToOriginal: false,
+            },
+          },
+          `gatsby-remark-relative-images`,
+        ],
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-remark`,
   ],
 }

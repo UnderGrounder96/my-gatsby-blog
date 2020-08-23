@@ -2,12 +2,10 @@ import React from "react"
 
 import Layout from "../components/Layout"
 
-import Style from "../scss/pages/style.module.scss"
-
 export default function ContactPage() {
   return (
     <Layout page="Contact">
-      <div className={Style.content}>
+      <div className="content">
         <p>
           {" "}
           I'm always open for contact via{" "}

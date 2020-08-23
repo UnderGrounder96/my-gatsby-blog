@@ -45,12 +45,9 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-}
-a,
-a:active,
-a:hover {
   outline-width: 0;
   text-decoration: none;
+  color: #438f65;
 }
 abbr[title] {
   border-bottom: none;
@@ -223,7 +220,7 @@ img {
   margin-bottom: 1.45rem;
   border-style: none;
 }
-img:hover{
+img:hover {
   opacity: 0.8;
 }
 h1 {
@@ -625,4 +622,17 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+// Extra stuff
+.content {
+  margin: 25% auto;
+  text-align: center;
+}
+
+/* 404 center */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
